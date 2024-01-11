@@ -5,7 +5,10 @@ import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { faImage } from "@fortawesome/free-regular-svg-icons";
+
+import IconLink from "@/components/IconLink";
 
 const useIsVisible = (ref: React.RefObject<HTMLElement>) => {
   const [isIntersecting, setIntersecting] = useState(false);
@@ -54,8 +57,6 @@ const ProjectTile: React.FC<ProjectTileProps> = ({
     }
   }, [isVisible]);
 
-  console.log(isVisible);
-
   const image = (() => {
     if (imageSrc) {
       return (
@@ -73,7 +74,7 @@ const ProjectTile: React.FC<ProjectTileProps> = ({
   })();
 
   return (
-    <div ref={ref} className={`flex w-full p-8 `}>
+    <div ref={ref} className="flex w-full p-8">
       <div
         className={`aspect-video h-64 ${
           isShown ? "animate-fade-in-left" : "opacity-0"
@@ -137,19 +138,26 @@ Delightful to use and great for beginners.`,
 export default function Home() {
   return (
     <main className="min-h-screen">
-      <div className="bg-zinc-700 text-white">
-        <div className="container mx-auto">
-          <div className="flex w-full flex-col items-center p-24">
-            <div className="rounded-full overflow-hidden">
-              <Image src="/me.jpg" alt="Logo" width={240} height={240} />
+      <div className="w-full h-screen bg-zinc-700 text-white">
+        <div className="container mx-auto h-full">
+          <div className="flex flex-col items-center justify-center w-full h-full p-24">
+            <div className="flex flex-col items-center animate-fade-in-up">
+              <div className="rounded-full overflow-hidden">
+                <Image src="/me.jpg" alt="Logo" width={240} height={240} />
+              </div>
+              <h1 className="text-5xl font-bold mt-8">Kevin Snyder</h1>
+              <h2 className="text-2xl mt-4">Software Engineer</h2>
+              <h3 className="text-xl">San Francisco, CA</h3>
             </div>
-            <h1 className="text-5xl font-bold mt-8">Kevin Snyder</h1>
-            <h2 className="text-2xl mt-4">Software Engineer</h2>
-            <h3 className="text-xl">San Francisco, CA</h3>
+          </div>
+        </div>
+        <div className="absolute bottom-0 w-full">
+          <div className="flex justify-center">
+            <IconLink icon={faChevronDown} href="#projects" />
           </div>
         </div>
       </div>
-      <div className="pt-24 pb-24 bg-sky-700 text-white">
+      <div id="projects" className="pt-24 pb-24 bg-sky-700 text-white">
         <div className="container mx-auto">
           <div className="flex w-full flex-col items-center">
             <h1 className="text-4xl font-bold">Projects</h1>

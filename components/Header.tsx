@@ -1,9 +1,9 @@
 import React, { useCallback, useState } from "react";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 import HeaderMenu from "./HeaderMenu";
+import IconButton from "./IconButton";
 
 const menuItems = [
   {
@@ -33,10 +33,10 @@ const Header: React.FC = () => {
 
   return (
     <header className="fixed w-full h-full bg-transparent">
-      <FontAwesomeIcon
+      <IconButton
         icon={faBars}
         onClick={handleMenuOpen}
-        className="w-8 h-8 p-4 text-white"
+        className="text-white"
       />
       <HeaderMenu
         items={menuItems}

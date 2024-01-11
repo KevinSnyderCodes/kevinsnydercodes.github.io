@@ -1,22 +1,14 @@
 import React, { useRef } from "react";
 
+import { useIsFirstRender } from "usehooks-ts";
+
 import classNames from "classnames";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 
 import HeaderMenuItem from "./HeaderMenuItem";
-
-const useIsFirstRender = () => {
-  const isFirstRender = useRef(true);
-
-  if (isFirstRender.current) {
-    isFirstRender.current = false;
-    return true;
-  }
-
-  return false;
-};
+import IconButton from "./IconButton";
 
 type HeaderMenuItemProps = React.ComponentProps<typeof HeaderMenuItem>;
 
@@ -37,11 +29,7 @@ const HeaderMenu: React.FC<Props> = ({ items, isOpen, onClose }) => {
         "animate-menu-out": !isFirstRender && !isOpen,
       })}
     >
-      <FontAwesomeIcon
-        icon={faXmark}
-        onClick={onClose}
-        className="w-8 h-8 p-4 text-black"
-      />
+      <IconButton icon={faXmark} onClick={onClose} className="text-black" />
       {items.map((props, i) => (
         <HeaderMenuItem key={i} {...props} onClick={onClose} />
       ))}

@@ -16,8 +16,9 @@ const config: Config = {
       animation: {
         "fade-in-left": "fade-in-left 0.5s ease-in",
         "fade-in-right": "fade-in-right 0.5s ease-in",
-        "menu-in": "menu-in 0.5s ease-out",
-        "menu-out": "menu-out 0.5s ease-in",
+        "fade-in-up": "fade-in-up 0.75s ease-in",
+        "menu-in": "menu-in 0.25s ease-out",
+        "menu-out": "menu-out 0.25s ease-in",
       },
       keyframes: {
         "fade-in-left": {
@@ -38,6 +39,16 @@ const config: Config = {
           "100%": {
             opacity: "1",
             transform: "translateX(0)",
+          },
+        },
+        "fade-in-up": {
+          "0%": {
+            opacity: "0",
+            transform: "translateY(15px)",
+          },
+          "100%": {
+            opacity: "1",
+            transform: "translateY(0)",
           },
         },
         "menu-in": {
