@@ -81,8 +81,8 @@ export default function RootLayout({
               isMenuOpen ? "opacity-100" : "opacity-0"
             }`}
           >
-            {menuItems.map((props) => (
-              <MenuItem {...props} onClick={onMenuItemClick} />
+            {menuItems.map((props, i) => (
+              <MenuItem key={i} {...props} onClick={onMenuItemClick} />
             ))}
           </div>
         </header>

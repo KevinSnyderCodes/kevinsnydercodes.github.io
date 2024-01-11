@@ -16,7 +16,8 @@ export default function About() {
           </div>
           <div className="items-left mt-12">
             <p className="mt-2">
-              Hi, I'm Kevin Snyder, a Software Engineer from San Francisco, CA.
+              Hi, I&apos;m Kevin Snyder, a Software Engineer from San Francisco,
+              CA.
             </p>
             <p className="mt-2">
               I have been working professionally as a software engineer for nine
@@ -24,7 +25,7 @@ export default function About() {
             </p>
             <p className="mt-2">
               Take a look at my <Link href="/projects">projects</Link> to see
-              what I've been working on.
+              what I&apos;ve been working on.
             </p>
             <p className="mt-2">
               I also have a <Link href="/blog">blog</Link> where I occasionally

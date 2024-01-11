@@ -153,8 +153,8 @@ export default function Home() {
         <div className="container mx-auto">
           <div className="flex w-full flex-col items-center">
             <h1 className="text-4xl font-bold">Projects</h1>
-            {projects.map((props) => (
-              <ProjectTile {...props} />
+            {projects.map((props, i) => (
+              <ProjectTile key={i} {...props} />
             ))}
           </div>
         </div>
