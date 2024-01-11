@@ -1,10 +1,7 @@
-import React, { useRef } from "react";
-
-import { useIsFirstRender } from "usehooks-ts";
+import React, { useEffect, useRef } from "react";
 
 import classNames from "classnames";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 
 import HeaderMenuItem from "./HeaderMenuItem";
@@ -19,14 +16,20 @@ type Props = {
 };
 
 const HeaderMenu: React.FC<Props> = ({ items, isOpen, onClose }) => {
-  const isFirstRender = useIsFirstRender();
+  const [hasOpened, setHasOpened] = React.useState(false);
+
+  useEffect(() => {
+    if (isOpen) {
+      setHasOpened(true);
+    }
+  }, [isOpen]);
 
   return (
     <div
       className={classNames("fixed top-0 left-0 w-64 h-full bg-white", {
         "-translate-x-[16rem]": !isOpen,
-        "animate-menu-in": !isFirstRender && isOpen,
-        "animate-menu-out": !isFirstRender && !isOpen,
+        "animate-menu-in": isOpen,
+        "animate-menu-out": hasOpened && !isOpen,
       })}
     >
       <IconButton icon={faXmark} onClick={onClose} className="text-black" />
