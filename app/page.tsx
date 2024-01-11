@@ -116,7 +116,7 @@ My first professional project.`,
 Used by Twitch streamers and tournament organizers.
 Seen by hundreds of viewers during Red Bull Hive Hustle 2019.`,
     technologies: ["TypeScript", "React", "WebSockets"],
-    status: "Surpassed by HiveMind",
+    status: "Replaced by HiveMind",
   },
   {
     title: "OpenAtlas",

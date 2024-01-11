@@ -10,9 +10,11 @@ type Props = {
 
 const HeaderMenuItem: React.FC<Props> = ({ name, href, onClick }) => {
   return (
-    <div onClick={onClick}>
-      <Link href={href}>{name}</Link>
-    </div>
+    <Link href={href}>
+      <div onClick={onClick} className="pl-4 pt-1 pb-1 hover:bg-gray-100">
+        {name}
+      </div>
+    </Link>
   );
 };
 

@@ -19,7 +19,11 @@ const HeaderMenu: React.FC<Props> = ({ items, isOpen, onClose }) => {
   }
 
   return (
-    <div className={`fixed top-0 left-0 w-64 h-full bg-white`}>
+    <div
+      className={`fixed z-10 top-0 left-0 w-64 h-full bg-white ${
+        isOpen ? "animate-menu-in" : ""
+      }`}
+    >
       <FontAwesomeIcon
         icon={faXmark}
         onClick={onClose}
