@@ -3,13 +3,14 @@
 import React, { useCallback, useState } from "react";
 
 import type { Metadata } from "next";
+
 import { Inter } from "next/font/google";
 
 import "./globals.css";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
+
+import Header from "@/components/Header";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -64,28 +65,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <header
-          className={`fixed w-48 h-full ${
-            isMenuOpen ? "bg-white" : "bg-transparent"
-          }`}
-        >
-          <FontAwesomeIcon
-            icon={isMenuOpen ? faXmark : faBars}
-            onClick={handleClick}
-            className={`w-8 h-8 p-4 ${
-              isMenuOpen ? "text-black" : "text-white"
-            }`}
-          />
-          <div
-            className={`w-48 bg-white absolute ${
-              isMenuOpen ? "opacity-100" : "opacity-0"
-            }`}
-          >
-            {menuItems.map((props, i) => (
-              <MenuItem key={i} {...props} onClick={onMenuItemClick} />
-            ))}
-          </div>
-        </header>
+        <Header />
         {children}
       </body>
     </html>
