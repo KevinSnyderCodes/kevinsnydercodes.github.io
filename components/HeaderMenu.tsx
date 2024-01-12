@@ -26,11 +26,14 @@ const HeaderMenu: React.FC<Props> = ({ items, isOpen, onClose }) => {
 
   return (
     <div
-      className={classNames("fixed top-0 left-0 w-64 h-full bg-white", {
-        "-translate-x-[16rem]": !isOpen,
-        "animate-menu-in": isOpen,
-        "animate-menu-out": hasOpened && !isOpen,
-      })}
+      className={classNames(
+        "fixed top-0 left-0 w-64 h-full bg-white shadow-2xl",
+        {
+          "-translate-x-[16rem]": !isOpen,
+          "animate-menu-in": isOpen,
+          "animate-menu-out": hasOpened && !isOpen,
+        }
+      )}
     >
       <IconButton icon={faXmark} onClick={onClose} className="text-black" />
       {items.map((props, i) => (

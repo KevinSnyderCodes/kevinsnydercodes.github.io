@@ -32,7 +32,7 @@ const Header: React.FC = () => {
   }, []);
 
   return (
-    <header className="fixed w-full h-full bg-transparent">
+    <header className="fixed z-10 w-full bg-transparent">
       <IconButton
         icon={faBars}
         onClick={handleMenuOpen}
