@@ -10,7 +10,7 @@ Below are some of the qualities I've picked out, written in the form of rules. T
 
 You use many different software applications each day. Some of them are enjoyable to use, but many are not. Yet some of the least enjoyable ones are seemingly used everywhere. You join a new company and the project management software is clunky, the documentation software is difficult to navigate, and the HR software is downright hostile.
 
-Yet on the other side there is software that you don't mind using. In fact, sometimes you enjoy it. The list is short but memorable: Slack, Notion, GitHub, Figma... Your list may differ, but it's likely that at least one of these comes to mind.
+On the other side there is software that you don't mind using. In fact, sometimes you enjoy it. The list is short but memorable: Slack, Notion, GitHub, Figma... Your list may differ, but it's likely that at least one of these comes to mind.
 
 This software offers what I would call a delightful experience. When you open these applications and look at their user interface, everything feels clear. It's obvious what each button does or where you should go to find something. Looking at the user interface doesn't strain your eyes or give you a headache. The colors, fonts, icons, and layouts feel like a natural extension of your mental model and how you expect things to work.
 
@@ -18,7 +18,7 @@ Of course, this software isn't perfect. You can recall a number of occasions whe
 
 Of all the projects and companies in my personal and professional career, the ones I enjoyed the most were those that used and built delightful software.
 
-When I'm building software, I don't want the experience to be anything short of delightful. I want to enjoy using what I've built and I want others to enjoy using it as well. I don't consider a project done unless it's enjoyable to use.
+That's the kind of software I want to create. When I'm building software, I don't want the experience to be anything short of delightful. I want to enjoy using what I've built and I want others to enjoy using it as well. I don't consider a project done unless it's enjoyable to use.
 
 You could write an entire book dissecting what makes a delightful experience when using software. It's certainly not an easy experience to create. You have to understand and predict your customer without asking what they want. Often times even if you do ask them, they don't actually know what they want. They just know that something is _bad_ and they want it to be _good_. It's your job to figure out _why_ it's bad and _how_ to make it good.
 
