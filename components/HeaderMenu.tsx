@@ -4,8 +4,8 @@ import classNames from "classnames";
 
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 
-import HeaderMenuItem from "./HeaderMenuItem";
-import IconButton from "./IconButton";
+import HeaderMenuItem from "@/components/HeaderMenuItem";
+import IconButton from "@/components/IconButton";
 
 type HeaderMenuItemProps = React.ComponentProps<typeof HeaderMenuItem>;
 

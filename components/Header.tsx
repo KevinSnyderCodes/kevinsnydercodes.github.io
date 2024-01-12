@@ -2,8 +2,8 @@ import React, { useCallback, useState } from "react";
 
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 
-import HeaderMenu from "./HeaderMenu";
-import IconButton from "./IconButton";
+import HeaderMenu from "@/components/HeaderMenu";
+import IconButton from "@/components/IconButton";
 
 const menuItems = [
   {

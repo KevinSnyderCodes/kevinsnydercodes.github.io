@@ -1,6 +1,8 @@
-import Link from "next/link";
 import React from "react";
-import IconButton from "./IconButton";
+
+import Link from "next/link";
+
+import IconButton from "@/components/IconButton";
 
 type Props = React.ComponentProps<typeof IconButton> & {
   href: string;
