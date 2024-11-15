@@ -10,6 +10,12 @@ import { faImage } from "@fortawesome/free-regular-svg-icons";
 
 import IconLink from "@/components/IconLink";
 
+import { pdfjs, Document, Page } from "react-pdf";
+import "react-pdf/dist/Page/TextLayer.css";
+import "react-pdf/dist/Page/AnnotationLayer.css";
+
+pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
+
 const useIsVisible = (ref: React.RefObject<HTMLElement>) => {
   const [isIntersecting, setIntersecting] = useState(false);
 
@@ -164,6 +170,16 @@ export default function Home() {
             {projects.map((props, i) => (
               <ProjectTile key={i} {...props} />
             ))}
+          </div>
+        </div>
+      </div>
+      <div id="resume" className="pt-24 pb-24 bg-[#dddddd]">
+        <div className="container mx-auto">
+          <div className="flex w-full flex-col items-center">
+            <h1 className="text-4xl font-bold">Resume</h1>
+            <Document file="/resume.pdf" className="mt-8 shadow-2xl">
+              <Page pageNumber={1} />
+            </Document>
           </div>
         </div>
       </div>
